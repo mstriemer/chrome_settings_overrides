@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "chrome_settings_overrides",
+  "version": "0.3",
+  "description": "chrome_settings_overrides description",
+  "applications": {
+      "gecko": {
+          "id": "@chrome_settings_overrides_test"
+      }
+  },
+  "chrome_settings_overrides" : {
+    "homepage": "https://developer.mozilla.org",
+    "search_provider": {
+        "name": "Yahoo",
+        "search_url": "https://search.yahoo.com/yhs/search?p=%s&ei=UTF-8&hspart=mozilla&hsimp=yhs-002",
+        "is_default": true
+    }
+  },
+  "chrome_url_overrides" : {
+    "newtab": "/newtab.html"
+  },
+  "icons": {
+    "64": "icon.png"
+  },
+  "background": { "scripts": ["bg.js"] },
+  "permissions": ["webRequest", "webRequestBlocking", "<all_urls>"]
+}
